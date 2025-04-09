@@ -1,20 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Emilh\\dev\\alpha_backend\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|c:\\users\\emilh\\dev\\alpha_backend\\data\\repositories\\projectrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|solutionrelative:data\\repositories\\projectrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F123FE-4484-48EF-8AE6-0683D81B2F09}|WebAPI\\WebAPI.csproj|c:\\users\\emilh\\dev\\alpha_backend\\webapi\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F123FE-4484-48EF-8AE6-0683D81B2F09}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F123FE-4484-48EF-8AE6-0683D81B2F09}|WebAPI\\WebAPI.csproj|c:\\users\\emilh\\dev\\alpha_backend\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F123FE-4484-48EF-8AE6-0683D81B2F09}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,50 +9,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProjectRepo.cs",
-              "DocumentMoniker": "C:\\Users\\Emilh\\dev\\alpha_backend\\Data\\Repositories\\ProjectRepo.cs",
-              "RelativeDocumentMoniker": "Data\\Repositories\\ProjectRepo.cs",
-              "ToolTip": "C:\\Users\\Emilh\\dev\\alpha_backend\\Data\\Repositories\\ProjectRepo.cs",
-              "RelativeToolTip": "Data\\Repositories\\ProjectRepo.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAuwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T11:58:38.321Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProjectController.cs",
-              "DocumentMoniker": "C:\\Users\\Emilh\\dev\\alpha_backend\\WebAPI\\Controllers\\ProjectController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\ProjectController.cs",
-              "ToolTip": "C:\\Users\\Emilh\\dev\\alpha_backend\\WebAPI\\Controllers\\ProjectController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\ProjectController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T11:51:23.879Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Emilh\\dev\\alpha_backend\\WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\Emilh\\dev\\alpha_backend\\WebAPI\\Program.cs",
-              "RelativeToolTip": "WebAPI\\Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAxwB8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T11:33:54.574Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             }
           ]
         },

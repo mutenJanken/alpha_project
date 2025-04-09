@@ -649,10 +649,12 @@ section > .content {
 
 /* Fick be om lite ai hjälp här med att få det ett av cardsen att hamna under/bakom det andra */
 .projects-layout {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
+  gap: 35px;
   margin-top: 32px;
 }
 
@@ -698,10 +700,10 @@ section > .content {
   /* justify-content: start; */
 }
 
-.card-title-menuoptions-container {
+.card-title-company-wrapper {
   display: flex;
   justify-content: start;
-  /* align-items: center; */
+  
   flex-direction: column;
   padding-left: 16px;
   width: 100%;
@@ -710,13 +712,9 @@ section > .content {
 .card-companyname {
   color: var(--gray-800);
 }
-.card-title {
-  /* margin-top: 12px;
-  margin-bottom:0px; */
-}
 
-.menu-options-container {
-}
+/* .menu-options-container {
+} */
 .menu {
   display: flex;
   align-items: center;
@@ -724,13 +722,13 @@ section > .content {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  /* position: relative; */
+
   &:hover {
     background-color: var(--gray-100);
     border-radius: 12px;
-    /* position: absolute; */
   }
 }
+
 .options-menu-icon {
   font-size: 20px;
   color: var(--gray-800);
@@ -746,11 +744,6 @@ section > .content {
 
 /* Project options menu */
 
-.menu-open-container {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-}
 .menu-open {
   display: flex;
   align-items: center;
@@ -780,19 +773,13 @@ section > .content {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.menu-closed {
-  display: none;
-}
-
 .menu-button {
   display: flex;
-  /* justify-content: start; */
   align-items: center;
   border: none;
   border-radius: 14px;
   width: 214px;
   height: 48px;
-  /* margin: 3px; */
   padding: 15px;
   background-color: var(--white);
   font-family: "Nunito", sans-serif;
@@ -822,4 +809,179 @@ section > .content {
 
 .delete-text {
   margin-left: 16px;
+}
+
+/* ADD PROJECT MODAL*/
+
+.modal-add-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.add-project-modal-open {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 550px;
+  height: 1110px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+  @media (width >= 768px) {
+  }
+}
+
+.top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  /* width: 490px; */
+}
+
+.exit-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  &:hover {
+    background-color: var(--white-200);
+  }
+}
+
+.project-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.label-text {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  &.date {
+    position: relative;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+}
+.select-dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  top: 15%;
+  right: 2.2%;
+  position: absolute;
+  &:hover {
+    background-color: var(--white-200);
+    pointer-events: none;
+  }
+}
+
+.input-field {
+  width: 490px;
+  height: 48px;
+  padding-left: 16px;
+  border-radius: 14px;
+  border: 2px solid var(--gray-100);
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+
+  &.description {
+    display: flex;
+    height: 143px;
+    padding-bottom: 95px;
+  }
+  &.budget {
+    padding-left: 40px;
+  }
+  &.date {
+    width: 233px;
+    height: 48px;
+  }
+  &.select {
+    appearance: none;
+  }
+}
+
+.start-end-container {
+  display: flex;
+  gap: 24px;
+}
+
+.date-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 233px;
+  height: 48px;
+  padding-left: 16px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  border-radius: 14px;
+  font-size: 15px;
+  border: 2px solid var(--gray-100);
+}
+
+.calendar-icon-wrapper {
+  top: 50%;
+  right: 7%;
+  position: absolute;
+  pointer-events: none;
+}
+
+.dollar-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 8px;
+  top: 0%;
+  left: 3%;
+  position: absolute;
+}
+.dollar-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.create-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+.button-create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  border-radius: 14px;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+
+  &:hover {
+    color: var(--btn-hover-text-color);
+    border-color: var(--btn-hover-border-color);
+    background-color: var(--btn-hover-background-color);
+  }
 }

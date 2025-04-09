@@ -32,10 +32,10 @@ namespace WebAPI
             var app = builder.Build();
             app.MapOpenApi();
             app.UseHttpsRedirection();
-            app.UseAuthorization();
-            app.MapControllers();
             // Registrerar mina CORS-policyer
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+            app.UseAuthorization();
+            app.MapControllers();
 
             app.Run();
 
