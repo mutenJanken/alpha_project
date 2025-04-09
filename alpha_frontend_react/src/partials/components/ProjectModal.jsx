@@ -42,8 +42,8 @@ const ProjectModal = ({
         endDate,
         budget,
         status: selectedProject.status.id,
-        clientId : selectedProject.clientId,
-        userId: selectedProject.userId,
+        clientId : selectedProject.client.id,
+        userId: selectedProject.user.id,
 
       }
       await editProject(selectedProject.id, editProjectData);
@@ -87,7 +87,7 @@ const ProjectModal = ({
     }
   }, [isEditModal, selectedProject]);
 
-  console.log(selectedProject.status.id)
+  // console.log(selectedProject.user.id)
   return (
     <>
       <form className="modal-add-container" onClick={toggleModal} onSubmit={handleModalSubmit}>

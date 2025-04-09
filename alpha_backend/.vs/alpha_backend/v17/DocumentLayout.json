@@ -53,8 +53,7 @@
               "RelativeToolTip": "Data\\Models\\AddProjectForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T18:53:18.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T18:53:18.369Z"
             },
             {
               "$type": "Document",
@@ -66,8 +65,7 @@
               "RelativeToolTip": "Data\\Models\\Status.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T18:43:18.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T18:43:18.919Z"
             },
             {
               "$type": "Document",
@@ -77,7 +75,7 @@
               "RelativeDocumentMoniker": "Data\\Models\\UpdateProjectForm.cs",
               "ToolTip": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Models\\UpdateProjectForm.cs",
               "RelativeToolTip": "Data\\Models\\UpdateProjectForm.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA1wBoAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAzwBoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T18:32:26.343Z",
               "EditorCaption": ""
@@ -88,22 +86,20 @@
               "Title": "ProjectController.cs",
               "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\Controllers\\ProjectController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\ProjectController.cs",
-              "ToolTip": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\Controllers\\ProjectController.cs*",
-              "RelativeToolTip": "WebAPI\\Controllers\\ProjectController.cs*",
+              "ToolTip": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\ProjectController.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:56:01.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T17:56:01.59Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "dbo.Projects [Data]",
+              "Title": "dbo.Projects.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SKURK_DEV_ALPHA_PROJECT_ALPHA_BACKEND_DATA_ALPHA_DATABASE.MDF/True/SqlTable/dbo.Projects.sql",
-              "ToolTip": "dbo.Projects [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SKURK_DEV_ALPHA_PROJECT_ALPHA_BACKEND_DATA_ALPHA_DATABASE.MDF/True/SqlTable/dbo.Projects.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-04-09T15:57:30.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T15:57:30.044Z"
             }
           ]
         },

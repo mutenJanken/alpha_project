@@ -68,7 +68,7 @@ const Projects = () => {
   // Update project helper
   const editProject = async (projectId, projectData) => {
     const isSuccess = await updateProject(projectId, projectData);
-
+ console.log(projectData)   
     if (isSuccess) {
       const updatedProjectList = await getAllProjects();
       if (updatedProjectList) {
