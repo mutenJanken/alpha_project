@@ -4,23 +4,18 @@ import CalendarIcon from "../../assets/images/calendar-icon.svg";
 import DropDownIcon from "../../assets/images/dropdown-icon.svg";
 import ExitIcon from "../../assets/images/exit-icon.svg";
 import DollarIcon from "../../assets/images/dollar-icon.svg";
-import { getAllClients } from "../../api/clientService";
-import { getAllUsers } from "../../api/userService";
-import { getAllStatuses } from "../../api/statusService";
 
 const ProjectModal = ({
-  toggleModal,
+  handleModalToggle,
   showStatusSelect,
   createProject,
   isEditModal,
-  selectedProject,
   editProject,
+  selectedProject,
+  clients,
+  users,
+  statuses,
 }) => {
-  // Fetch states
-  const [clients, setClients] = useState([]);
-  const [users, setUsers] = useState([]);
-  const [statuses, setStatuses] = useState([]);
-
   const [projectName, setProjectName] = useState("");
   const [clientName, setClientName] = useState("");
   const [description, setDescription] = useState("");
@@ -28,24 +23,23 @@ const ProjectModal = ({
   const [endDate, setEndDate] = useState("");
   const [projectOwner, setProjectOwner] = useState("");
   const [budget, setBudget] = useState("");
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("1");
 
   const handleModalSubmit = async (event) => {
     event.preventDefault();
 
     if (isEditModal) {
-      const editProjectData ={
-        id: selectedProject.id,
-        projectName,
-        description,
-        startDate,
-        endDate,
-        budget,
-        status: selectedProject.status.id,
-        clientId : selectedProject.client.id,
-        userId: selectedProject.user.id,
-
-      }
+      const editProjectData = {
+        Id: selectedProject.id,
+        ProjectName: projectName,
+        Description: description,
+        StartDate: startDate,
+        EndDate: endDate,
+        Budget: budget,
+        StatusId: parseInt(status, 10),
+        ClientId: clientName,
+        UserId: projectOwner,
+      };
       await editProject(selectedProject.id, editProjectData);
     } else {
       const addProjectData = {
@@ -62,12 +56,6 @@ const ProjectModal = ({
     }
   };
 
-  useEffect(() => {
-    getAllClients().then(setClients);
-    getAllUsers().then(setUsers);
-    getAllStatuses().then(setStatuses);
-  }, [toggleModal]);
-
   // Fyller input och select fält med data från projektet som användaren vill redigera.
   // Fick be copilot om hjälp här, speciellt med datumen då dom på serversidan skapas
   // med både datum och tid(någon ISO format), vilken inte kan skrivas ut i input type="date".
@@ -77,20 +65,21 @@ const ProjectModal = ({
   useEffect(() => {
     if (isEditModal && selectedProject) {
       setProjectName(selectedProject.projectName || "");
-      setClientName(selectedProject.client.clientName || "");
+      setClientName(selectedProject.client.id || "");
       setDescription(selectedProject.description || "");
       setStartDate(selectedProject.startDate.split("T")[0] || "");
       setEndDate(selectedProject.endDate.split("T")[0] || "");
-      setProjectOwner(selectedProject.user.firstName + " " + selectedProject.user.lastName || "");
+      setProjectOwner(selectedProject.user.id || "");
       setBudget(selectedProject.budget || null);
-      setStatus(selectedProject.status || "");
+      setStatus(selectedProject.status.id || "");
     }
   }, [isEditModal, selectedProject]);
 
-  // console.log(selectedProject.user.id)
+  console.log("Rendering ProjectModal");
+
   return (
     <>
-      <form className="modal-add-container" onClick={toggleModal} onSubmit={handleModalSubmit}>
+      <form className="modal-add-container" onClick={handleModalToggle} onSubmit={handleModalSubmit}>
         {/* chatgpt fick hjälpa mig med ( onClick={(event) => event.stopPropagation()} ) då
           själva modalen stängdes när man klickade på den pga event bubbling */}
         <div className="add-project-modal-open" onClick={(event) => event.stopPropagation()}>
@@ -98,7 +87,7 @@ const ProjectModal = ({
             <div>
               <h3>{isEditModal ? "Edit Modal" : "Add Project"}</h3>
             </div>
-            <div className="exit-icon-wrapper" onClick={toggleModal}>
+            <div className="exit-icon-wrapper" onClick={handleModalToggle}>
               <img src={ExitIcon} alt="exit-icon" />
             </div>
           </div>

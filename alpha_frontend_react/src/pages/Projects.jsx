@@ -4,19 +4,36 @@ import ProjectCard from "../partials/components/ProjectCard";
 import { useState } from "react";
 import ProjectModal from "../partials/components/ProjectModal";
 import { addNewProject, deleteProject, getAllProjects, updateProject } from "../api/projectService";
+import {getAllClients} from "../api/clientService"
+import {getAllUsers} from "../api/userService"
+import {getAllStatuses} from "../api/statusService"
 
 const Projects = () => {
+  const [clients, setClients] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [statuses, setStatuses] = useState([]);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [projects, setProjects] = useState([]);
   const [showStatusSelect, setShowStatusSelect] = useState(false);
   const [selectedProject, setSelectedProject] = useState();
   const [isEditModal, setIsEditModal] = useState(false);
-  // Ändrar isModalopen till antingen true eller false beroende på vad den
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [projectMenuId, setprojectMenuId] = useState(null);
+
+  // Ändrar isModalOpen till antingen true eller false beroende på vad den
   // för tillfället är, och på så sätt öppnas eller stängs modalen.
-  // handleModalToggle skickas in ModalButton komponenten och används där i onClick.
+  // Skickas till ModalButton, för att öppna Add Project.
+  // Skickas till ProjectCar -> ProjectDropdownMenu för att öppna Edit Project.
+  // Skickas till ProjectModal för att kunna stänga Modalen och används som trigger i
+  // en useEffect för att hämta users, clients och statuses.
   const handleModalToggle = () => {
     setIsModalOpen(!isModalOpen);
     setIsEditModal(false);
+  };
+
+  const handleMenuToggle = (projectId) => {
+    setprojectMenuId(projectMenuId ? null : projectId);
   };
 
   // Get all helper
@@ -68,7 +85,6 @@ const Projects = () => {
   // Update project helper
   const editProject = async (projectId, projectData) => {
     const isSuccess = await updateProject(projectId, projectData);
- console.log(projectData)   
     if (isSuccess) {
       const updatedProjectList = await getAllProjects();
       if (updatedProjectList) {
@@ -82,50 +98,91 @@ const Projects = () => {
     }
   };
 
-  // fetchProject körs varje gång användaren går in i /projects
+  // fetchProject körs varje gång användaren går in i /projects så att
+  // ProjectCards kan renderas.
+  // useEffect(() => {
+  //   fetchProjects();
+  // }, []);
+
   useEffect(() => {
     fetchProjects();
+    getAllClients().then(setClients);
+    getAllUsers().then(setUsers);
+    getAllStatuses().then(setStatuses);
   }, []);
 
   return (
     <div id="projects">
+      {/* Modal button */}
       <div className="page-header">
         <h1 className="h2">Projects</h1>
         <ModalButton
           type="add"
           target="#addProjectModal"
           text="Add Project"
-          toggleModal={handleModalToggle}
+          handleModalToggle={handleModalToggle}
           setShowStatusSelect={setShowStatusSelect}
         />
+      </div>
+
+      {/* Menu filter */}
+      {/* Fick be copilot om hjälp med active, lyckades inte själv. */}
+      <div className="menu-filter">
+        <div>
+          <button
+            className={`button-filter all ${activeFilter === "all" ? "active" : ""}`}
+            onClick={() => setActiveFilter("all")}
+          >
+            {`ALL[${projects.length}]`}
+          </button>
+          <div className={`button-filter-bottom ${activeFilter === "all" ? "highlighted" : ""}`}></div>
+        </div>
+        <div>
+          <button
+            className={`button-filter completed ${activeFilter === "completed" ? "active" : ""}`}
+            onClick={() => setActiveFilter("completed")}
+          >
+            {`COMPLETED[${projects.filter((project) => project.status.id === 2).length}]`}
+          </button>
+          <div className={`button-filter-bottom ${activeFilter === "completed" ? "highlighted" : ""}`}></div>
+        </div>
       </div>
 
       {/* Modal Add Project */}
       {isModalOpen && (
         <ProjectModal
-          toggleModal={handleModalToggle}
+          handleModalToggle={handleModalToggle}
           showStatusSelect={showStatusSelect}
           createProject={createProject}
           isEditModal={isEditModal}
           selectedProject={selectedProject}
           editProject={editProject}
+          clients={clients}
+          users={users}
+          statuses={statuses}
         />
       )}
 
       {/* Cards */}
-      {/* Renderar sedan ut ProjectCard Komponenter utifrån så många projekt som finns i databasen */}
-      <div className="projects-layout">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            toggleModal={handleModalToggle}
-            setShowStatusSelect={setShowStatusSelect}
-            removeProject={removeProject}
-            setIsEditModal={setIsEditModal}
-            setSelectedProject={setSelectedProject}
-          />
-        ))}
+      {/* Renderar ut alla kort om activeFilter är satt till "all".
+          Om active filter är "completed" så renderas bara projekten som har project.status.id === 2. */}
+      <div className="projects-layout" onClick={handleMenuToggle}>
+        {projects
+          .filter((project) => activeFilter === "all" || project.status.id === 2)
+          .map((filteredProject) => (
+            <ProjectCard
+              key={filteredProject.id}
+              project={filteredProject}
+              handleModalToggle={handleModalToggle}
+              setShowStatusSelect={setShowStatusSelect}
+              removeProject={removeProject}
+              setIsEditModal={setIsEditModal}
+              setSelectedProject={setSelectedProject}
+              projectMenuId={projectMenuId}
+              setprojectMenuId={setprojectMenuId}
+              handleMenuToggle={handleMenuToggle}
+            />
+          ))}
       </div>
     </div>
   );

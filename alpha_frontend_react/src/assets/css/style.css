@@ -647,20 +647,59 @@ section > .content {
   }
 }
 
+/* Filter Menu */
+/* Copilot hjälp med active, lyckades inte lösa det */
+.menu-filter{
+  display: flex;
+  width: 100%;
+  height: 34px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--gray-300);
+  gap: 16px;
+}
+
+.button-filter{
+  border: none;
+  background-color:  var(--white-100);
+  color: var(--gray-800);
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+}
+
+.button-filter.active {
+  color: var(--blue);
+}
+
+.button-filter-bottom{
+  background-color: var(--transparent);
+  width: 100%;
+  height:2.5px;
+  margin-top: 8.9px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.button-filter-bottom.highlighted {
+  background-color: var(--blue);
+}
+
 /* Fick be om lite ai hjälp här med att få det ett av cardsen att hamna under/bakom det andra */
 .projects-layout {
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
   width: 100%;
-  height: 100%;
-  gap: 35px;
-  margin-top: 32px;
+  /* height: 100vh; */
+  /* gap: 35px; */
+  margin-top: 40px;
 }
 
 .card-container {
   width: 350px;
   height: 276px;
+  margin-right: 40px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
   position: relative;
@@ -703,7 +742,6 @@ section > .content {
 .card-title-company-wrapper {
   display: flex;
   justify-content: start;
-  
   flex-direction: column;
   padding-left: 16px;
   width: 100%;
@@ -713,8 +751,6 @@ section > .content {
   color: var(--gray-800);
 }
 
-/* .menu-options-container {
-} */
 .menu {
   display: flex;
   align-items: center;
@@ -742,6 +778,7 @@ section > .content {
   color: var(--dark-400);
 }
 
+
 /* Project options menu */
 
 .menu-open {
@@ -759,6 +796,7 @@ section > .content {
   right: 5%;
   background-color: var(--white);
   box-shadow: 0px 1px 40px rgba(49, 49, 49, 0.2);
+
 }
 
 .box-shadow-behind-menu {
@@ -824,6 +862,7 @@ section > .content {
   z-index: 3;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
 }
 
 .add-project-modal-open {
@@ -836,9 +875,6 @@ section > .content {
   width: 550px;
   height: 1110px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-
-  @media (width >= 768px) {
-  }
 }
 
 .top-wrapper {

@@ -1,6 +1,6 @@
 import React from "react";
 
-const ModalButton = ({ type, target, text, toggleModal, setShowStatusSelect }) => {
+const ModalButton = ({ type, target, text, handleModalToggle, setShowStatusSelect }) => {
   return (
     <button
       type="button"
@@ -9,7 +9,7 @@ const ModalButton = ({ type, target, text, toggleModal, setShowStatusSelect }) =
       className={`btn btn-${type}`}
       onClick={() => {
         setShowStatusSelect(false);
-        toggleModal();
+        handleModalToggle();
       }}
     >
       <span>{text}</span>

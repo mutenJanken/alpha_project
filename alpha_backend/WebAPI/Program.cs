@@ -34,6 +34,7 @@ namespace WebAPI
             app.UseHttpsRedirection();
             // Registrerar mina CORS-policyer
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+            app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
 

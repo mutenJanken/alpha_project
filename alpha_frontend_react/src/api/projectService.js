@@ -54,8 +54,8 @@ export const addNewProject = async (newProject) => {
 };
 
 export const updateProject = async (projectId, projectData) => {
-  console.log(projectId, projectData);
-  const apiProjectEndpoint = `https://localhost:7234/api/Projects/${projectId}`;
+  console.log(projectData);
+  const apiProjectEndpoint = `https://localhost:7234/api/Projects/`;
   try {
     const response = await fetch(apiProjectEndpoint, {
       method: "PUT",

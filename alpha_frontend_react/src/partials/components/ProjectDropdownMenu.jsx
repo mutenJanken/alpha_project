@@ -2,22 +2,22 @@ import EditIcon from "../../assets/images/edit-icon.svg";
 import DeleteIcon from "../../assets/images/delete-icon.svg";
 
 const ProjectDropdownMenu = ({
-  toggleModal,
+  handleModalToggle,
   setShowStatusSelect,
   project,
   removeProject,
   setIsEditModal,
-  setSelectedProject
+  setSelectedProject,
 }) => {
   return (
     <div className="menu-container">
-      <div className="menu-open">
+      <div className="menu-open" onClick={(event) => event.stopPropagation()}>
         <button
           className="menu-button edit"
           type="button"
           onClick={() => {
             setShowStatusSelect(true);
-            toggleModal();
+            handleModalToggle();
             setIsEditModal(true);
             setSelectedProject(project)
           }}
@@ -31,6 +31,7 @@ const ProjectDropdownMenu = ({
         </button>
       </div>
       <div className="box-shadow-behind-menu">bakom</div>
+      {/* <div className="menu-close">MENU CLOSE</div> */}
     </div>
   );
 };
