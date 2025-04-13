@@ -1,12 +1,12 @@
 export const getAllClients = async () => {
-  const apiClientsEndpoint = "https://localhost:7234/api/clients/";
+  const apiClientsEndpoint = `${import.meta.env.VITE_API_URL}`;
 
   try {
-    const response = await fetch(apiClientsEndpoint, {
+    const response = await fetch(`${apiClientsEndpoint}/clients`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "X-Api-Key": "OWRjNDZhOGUtMTIzNS00ZWNmLWFhZTQtNWU3ZjQxMzU4MGEx",
+        "X-Api-Key": import.meta.env.VITE_X_API_KEY,
       },
     });
     const clientsData = await response.json();

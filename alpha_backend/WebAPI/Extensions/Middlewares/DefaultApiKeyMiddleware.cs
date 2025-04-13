@@ -1,4 +1,7 @@
-﻿namespace WebAPI.Extensions.Middlewares
+﻿using Azure;
+using Microsoft.IdentityModel.Tokens;
+
+namespace WebAPI.Extensions.Middlewares
 {
     public class DefaultApiKeyMiddleware(RequestDelegate next, IConfiguration configuration)
     {
@@ -14,10 +17,11 @@
             {
                 context.Response.StatusCode = 401;
                 await context.Response.WriteAsync("Invalid api-key or api-key is missing.");
+
                 return;
             }
 
-            if(!string.Equals(providedApiKey, defaultApiKey))
+            if (!string.Equals(providedApiKey, defaultApiKey))
             {
                 context.Response.StatusCode = 401;
                 await context.Response.WriteAsync("Invalid api-key.");

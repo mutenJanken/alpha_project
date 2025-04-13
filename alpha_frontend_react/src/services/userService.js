@@ -1,12 +1,12 @@
 export const getAllUsers = async () => {
-  const apiUsersEndpoint = "https://localhost:7234/api/users/";
+  const apiUsersEndpoint = import.meta.env.VITE_API_URL;
 
   try {
-    const response = await fetch(apiUsersEndpoint, {
+    const response = await fetch(`${apiUsersEndpoint}/users`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "X-Api-Key": "OWRjNDZhOGUtMTIzNS00ZWNmLWFhZTQtNWU3ZjQxMzU4MGEx",
+        "X-Api-Key": import.meta.env.VITE_X_API_KEY,
       },
     });
     const usersData = await response.json();

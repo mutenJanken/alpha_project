@@ -7,13 +7,13 @@
 // console.log, och på så sätt samtidigt separera ansvar.
 
 export const getAllProjects = async () => {
-  const apiProjectsEndpoint = "https://localhost:7234/api/Projects/";
+  const apiProjectsEndpoint = import.meta.env.VITE_API_URL;
   try {
-    const response = await fetch(apiProjectsEndpoint, {
+    const response = await fetch(`${apiProjectsEndpoint}/projects`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "X-Api-Key": "OWRjNDZhOGUtMTIzNS00ZWNmLWFhZTQtNWU3ZjQxMzU4MGEx",
+        "X-Api-Key": import.meta.env.VITE_X_API_KEY,
       },
     });
     if (!response.ok) {
@@ -27,13 +27,13 @@ export const getAllProjects = async () => {
 };
 
 export const getProjectById = async (id) => {
-  const apiProjectEndpoint = `https://localhost:7234/api/Projects/${id}`;
+  const apiProjectEndpoint = import.meta.env.VITE_API_URL;
   try {
-    const response = await fetch(apiProjectEndpoint, {
+    const response = await fetch(`${apiProjectEndpoint}/projects/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "X-Api-Key": "OWRjNDZhOGUtMTIzNS00ZWNmLWFhZTQtNWU3ZjQxMzU4MGEx",
+        "X-Api-Key": import.meta.env.VITE_X_API_KEY,
       },
     });
     if (!response.ok) {
@@ -47,13 +47,13 @@ export const getProjectById = async (id) => {
 };
 
 export const addNewProject = async (newProject) => {
-  const apiProjectEndpoint = "https://localhost:7234/api/Projects/";
+  const apiProjectEndpoint = import.meta.env.VITE_API_URL;
   try {
-    const response = await fetch(apiProjectEndpoint, {
+    const response = await fetch(`${apiProjectEndpoint}/projects`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-Api-Key": "OWRjNDZhOGUtMTIzNS00ZWNmLWFhZTQtNWU3ZjQxMzU4MGEx",
+        "X-Api-Key": import.meta.env.VITE_X_API_KEY,
       },
       body: JSON.stringify(newProject),
     });
@@ -70,13 +70,13 @@ export const addNewProject = async (newProject) => {
 
 export const updateProject = async (projectId, projectData) => {
   console.log(projectData);
-  const apiProjectEndpoint = `https://localhost:7234/api/Projects/`;
+  const apiProjectEndpoint = import.meta.env.VITE_API_URL;
   try {
-    const response = await fetch(apiProjectEndpoint, {
+    const response = await fetch(`${apiProjectEndpoint}/projects`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        "X-Api-Key": "OWRjNDZhOGUtMTIzNS00ZWNmLWFhZTQtNWU3ZjQxMzU4MGEx",
+        "X-Api-Key": import.meta.env.VITE_X_API_KEY,
       },
       body: JSON.stringify(projectData),
     });
@@ -92,13 +92,13 @@ export const updateProject = async (projectId, projectData) => {
 };
 
 export const deleteProject = async (projectId) => {
-  const apiProjectEndpoint = `https://localhost:7234/api/Projects/${projectId}`;
+  const apiProjectEndpoint = import.meta.env.VITE_API_URL;
   try {
-    const response = await fetch(apiProjectEndpoint, {
+    const response = await fetch(`${apiProjectEndpoint}/projects/${projectId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        "X-Api-Key": "OWRjNDZhOGUtMTIzNS00ZWNmLWFhZTQtNWU3ZjQxMzU4MGEx",
+        "X-Api-Key": import.meta.env.VITE_X_API_KEY,
       },
     });
 
