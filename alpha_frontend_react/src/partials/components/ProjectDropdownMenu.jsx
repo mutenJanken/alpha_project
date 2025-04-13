@@ -8,6 +8,8 @@ const ProjectDropdownMenu = ({
   removeProject,
   setIsEditModal,
   setSelectedProject,
+  handleMenuToggle
+
 }) => {
   return (
     <div className="menu-container">
@@ -17,9 +19,11 @@ const ProjectDropdownMenu = ({
           type="button"
           onClick={() => {
             setShowStatusSelect(true);
-            handleModalToggle();
+            handleModalToggle(true);
             setIsEditModal(true);
             setSelectedProject(project)
+            handleMenuToggle(false)
+
           }}
         >
           <img className="edit-icon" src={EditIcon} alt="edit-icon" />

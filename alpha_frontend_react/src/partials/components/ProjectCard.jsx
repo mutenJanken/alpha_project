@@ -41,6 +41,7 @@ const ProjectCard = ({
                 removeProject={removeProject}
                 setIsEditModal={setIsEditModal}
                 setSelectedProject={setSelectedProject}
+                handleMenuToggle={handleMenuToggle}
               />
             )}
           </div>

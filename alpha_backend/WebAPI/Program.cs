@@ -3,6 +3,7 @@ using Data.Contexts;
 using Data.Repositories;
 using Data.Services;
 using Microsoft.EntityFrameworkCore;
+using WebAPI.Extensions.Middlewares;
 
 namespace WebAPI
 {
@@ -29,11 +30,15 @@ namespace WebAPI
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("LocalDB"))
             );
 
+
             var app = builder.Build();
+            // Middlewares
             app.MapOpenApi();
             app.UseHttpsRedirection();
             // Registrerar mina CORS-policyer
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+
+            app.UseMiddleware<DefaultApiKeyMiddleware>();
             app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();

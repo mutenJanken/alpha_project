@@ -46,7 +46,8 @@ namespace Data.Repositories
 
         public virtual async Task<TEntity?> GetAsync(Expression<Func<TEntity, bool>> expression)
         {
-            return await _table.FirstOrDefaultAsync(expression);
+            var entity = await _table.FirstOrDefaultAsync(expression);
+            return entity;
         }
 
         public virtual async Task<bool> UpdateAsync(TEntity entity)
@@ -77,7 +78,5 @@ namespace Data.Repositories
         {
             return await _table.AnyAsync(expression);
         }
-
-
     }
 }

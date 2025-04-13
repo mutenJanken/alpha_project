@@ -3,15 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|c:\\users\\skurk\\dev\\alpha_project\\alpha_backend\\data\\models\\addprojectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|solutionrelative:data\\models\\addprojectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86F123FE-4484-48EF-8AE6-0683D81B2F09}|WebAPI\\WebAPI.csproj|c:\\users\\skurk\\dev\\alpha_project\\alpha_backend\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F123FE-4484-48EF-8AE6-0683D81B2F09}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|c:\\users\\skurk\\dev\\alpha_project\\alpha_backend\\data\\models\\updateprojectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|solutionrelative:data\\models\\updateprojectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86F123FE-4484-48EF-8AE6-0683D81B2F09}|WebAPI\\WebAPI.csproj|c:\\users\\skurk\\dev\\alpha_project\\alpha_backend\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{86F123FE-4484-48EF-8AE6-0683D81B2F09}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SKURK_DEV_ALPHA_PROJECT_ALPHA_BACKEND_DATA_ALPHA_DATABASE.MDF/True/SqlTable/dbo.Projects.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{86F123FE-4484-48EF-8AE6-0683D81B2F09}|WebAPI\\WebAPI.csproj|c:\\users\\skurk\\dev\\alpha_project\\alpha_backend\\webapi\\extensions\\middlewares\\defaultapikeymiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F123FE-4484-48EF-8AE6-0683D81B2F09}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\extensions\\middlewares\\defaultapikeymiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|c:\\users\\skurk\\dev\\alpha_project\\alpha_backend\\data\\repositories\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|solutionrelative:data\\repositories\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|c:\\users\\skurk\\dev\\alpha_project\\alpha_backend\\data\\contexts\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|solutionrelative:data\\contexts\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|c:\\users\\skurk\\dev\\alpha_project\\alpha_backend\\data\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|solutionrelative:data\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,37 +50,76 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddProjectForm.cs",
-              "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Models\\AddProjectForm.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\AddProjectForm.cs",
-              "ToolTip": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Models\\AddProjectForm.cs",
-              "RelativeToolTip": "Data\\Models\\AddProjectForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DefaultApiKeyMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\Extensions\\Middlewares\\DefaultApiKeyMiddleware.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Extensions\\Middlewares\\DefaultApiKeyMiddleware.cs",
+              "ToolTip": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\Extensions\\Middlewares\\DefaultApiKeyMiddleware.cs",
+              "RelativeToolTip": "WebAPI\\Extensions\\Middlewares\\DefaultApiKeyMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T16:32:39.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T18:40:12.61Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UpdateProjectForm.cs",
-              "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Models\\UpdateProjectForm.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\UpdateProjectForm.cs",
-              "ToolTip": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Models\\UpdateProjectForm.cs",
-              "RelativeToolTip": "Data\\Models\\UpdateProjectForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T16:31:57.804Z"
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "WebAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\appsettings.json",
+              "RelativeToolTip": "WebAPI\\appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-12T18:35:04.09Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.Projects.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SKURK_DEV_ALPHA_PROJECT_ALPHA_BACKEND_DATA_ALPHA_DATABASE.MDF/True/SqlTable/dbo.Projects.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SKURK_DEV_ALPHA_PROJECT_ALPHA_BACKEND_DATA_ALPHA_DATABASE.MDF/True/SqlTable/dbo.Projects.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-04-10T08:09:56.343Z"
+              "DocumentIndex": 3,
+              "Title": "BaseRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Repositories\\BaseRepo.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\BaseRepo.cs",
+              "ToolTip": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Repositories\\BaseRepo.cs",
+              "RelativeToolTip": "Data\\Repositories\\BaseRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T13:59:48.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\Program.cs",
+              "RelativeToolTip": "WebAPI\\Program.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAiwCYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T13:38:15.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Contexts\\DataContext.cs",
+              "RelativeDocumentMoniker": "Data\\Contexts\\DataContext.cs",
+              "ToolTip": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Contexts\\DataContext.cs",
+              "RelativeToolTip": "Data\\Contexts\\DataContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T13:33:50.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Entities\\UserEntity.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\UserEntity.cs",
+              "ToolTip": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Entities\\UserEntity.cs",
+              "RelativeToolTip": "Data\\Entities\\UserEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T12:42:43.277Z"
             }
           ]
         },

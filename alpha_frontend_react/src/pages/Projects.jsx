@@ -3,10 +3,10 @@ import ModalButton from "../partials/components/ModalButton";
 import ProjectCard from "../partials/components/ProjectCard";
 import { useState } from "react";
 import ProjectModal from "../partials/components/ProjectModal";
-import { addNewProject, deleteProject, getAllProjects, updateProject } from "../api/projectService";
-import {getAllClients} from "../api/clientService"
-import {getAllUsers} from "../api/userService"
-import {getAllStatuses} from "../api/statusService"
+import { addNewProject, deleteProject, getAllProjects, updateProject } from "../services/projectService";
+import { getAllClients } from "../services/clientService";
+import { getAllUsers } from "../services/userService";
+import { getAllStatuses } from "../services/statusService";
 
 const Projects = () => {
   const [clients, setClients] = useState([]);
@@ -168,6 +168,7 @@ const Projects = () => {
           Om active filter är "completed" så renderas bara projekten som har project.status.id === 2. */}
       <div className="projects-layout" onClick={handleMenuToggle}>
         {projects
+          .sort((projectA, projectB) => new Date(projectB.created) - new Date(projectA.created))
           .filter((project) => activeFilter === "all" || project.status.id === 2)
           .map((filteredProject) => (
             <ProjectCard
