@@ -27,7 +27,7 @@ namespace WebAPI
             builder.Services.AddScoped<IProjectService, ProjectService>();
             // Registrerar och konfigurerar min DataContext
             builder.Services.AddDbContext<DataContext>(opt =>
-                opt.UseSqlServer(builder.Configuration.GetConnectionString("LocalDB"))
+                opt.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"))
             );
 
 
