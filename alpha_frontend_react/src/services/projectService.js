@@ -5,15 +5,16 @@
 // mer detaljerade felmeddelanden för utvecklaren, men att man kan presentera mer
 // "användarvänliga" fel i "affärslogiks" funktionerna via någon ui komponent eller
 // console.log, och på så sätt samtidigt separera ansvar.
+const API_KEY = import.meta.env.VITE_X_API_KEY;
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const getAllProjects = async () => {
-  const apiProjectsEndpoint = import.meta.env.VITE_API_URL;
   try {
-    const response = await fetch(`${apiProjectsEndpoint}/projects`, {
+    const response = await fetch(`${API_URL}/projects`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "X-Api-Key": import.meta.env.VITE_X_API_KEY,
+        "X-Api-Key": API_KEY,
       },
     });
     if (!response.ok) {
@@ -27,13 +28,12 @@ export const getAllProjects = async () => {
 };
 
 export const getProjectById = async (id) => {
-  const apiProjectEndpoint = import.meta.env.VITE_API_URL;
   try {
-    const response = await fetch(`${apiProjectEndpoint}/projects/${id}`, {
+    const response = await fetch(`${API_URL}/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "X-Api-Key": import.meta.env.VITE_X_API_KEY,
+        "X-Api-Key": API_KEY,
       },
     });
     if (!response.ok) {
@@ -47,13 +47,12 @@ export const getProjectById = async (id) => {
 };
 
 export const addNewProject = async (newProject) => {
-  const apiProjectEndpoint = import.meta.env.VITE_API_URL;
   try {
-    const response = await fetch(`${apiProjectEndpoint}/projects`, {
+    const response = await fetch(`${API_URL}/projects`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-Api-Key": import.meta.env.VITE_X_API_KEY,
+        "X-Api-Key": API_KEY,
       },
       body: JSON.stringify(newProject),
     });
@@ -69,14 +68,12 @@ export const addNewProject = async (newProject) => {
 };
 
 export const updateProject = async (projectId, projectData) => {
-  console.log(projectData);
-  const apiProjectEndpoint = import.meta.env.VITE_API_URL;
   try {
-    const response = await fetch(`${apiProjectEndpoint}/projects`, {
+    const response = await fetch(`${API_URL}/projects`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        "X-Api-Key": import.meta.env.VITE_X_API_KEY,
+        "X-Api-Key": API_KEY,
       },
       body: JSON.stringify(projectData),
     });
@@ -92,9 +89,8 @@ export const updateProject = async (projectId, projectData) => {
 };
 
 export const deleteProject = async (projectId) => {
-  const apiProjectEndpoint = import.meta.env.VITE_API_URL;
   try {
-    const response = await fetch(`${apiProjectEndpoint}/projects/${projectId}`, {
+    const response = await fetch(`${API_URL}/projects/${projectId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
