@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import ModalButton from "../partials/components/ModalButton";
-import ProjectCard from "../partials/components/ProjectCard";
+import ProjectCard from "./project_components/ProjectCard";
 import { useState } from "react";
-import ProjectModal from "../partials/components/ProjectModal";
+import ProjectModal from "./project_components/ProjectModal";
+import ProjectStatusTabs from "./project_components/ProjectStatusTabs";
 import { addNewProject, deleteProject, getAllProjects, updateProject } from "../services/projectService";
 import { getAllClients } from "../services/clientService";
 import { getAllUsers } from "../services/userService";
@@ -12,7 +13,6 @@ const Projects = () => {
   const [clients, setClients] = useState([]);
   const [users, setUsers] = useState([]);
   const [statuses, setStatuses] = useState([]);
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [projects, setProjects] = useState([]);
   const [showStatusSelect, setShowStatusSelect] = useState(false);
@@ -25,8 +25,7 @@ const Projects = () => {
   // för tillfället är, och på så sätt öppnas eller stängs modalen.
   // Skickas till ModalButton, för att öppna Add Project.
   // Skickas till ProjectCar -> ProjectDropdownMenu för att öppna Edit Project.
-  // Skickas till ProjectModal för att kunna stänga Modalen och används som trigger i
-  // en useEffect för att hämta users, clients och statuses.
+  // Skickas till ProjectModal för att kunna stänga Modalen.
   const handleModalToggle = () => {
     setIsModalOpen(!isModalOpen);
     setIsEditModal(false);
@@ -127,26 +126,7 @@ const Projects = () => {
 
       {/* Menu filter */}
       {/* Fick be copilot om hjälp med active, lyckades inte själv. */}
-      <div className="menu-filter">
-        <div>
-          <button
-            className={`button-filter all ${activeFilter === "all" ? "active" : ""}`}
-            onClick={() => setActiveFilter("all")}
-          >
-            {`ALL[${projects.length}]`}
-          </button>
-          <div className={`button-filter-bottom ${activeFilter === "all" ? "highlighted" : ""}`}></div>
-        </div>
-        <div>
-          <button
-            className={`button-filter completed ${activeFilter === "completed" ? "active" : ""}`}
-            onClick={() => setActiveFilter("completed")}
-          >
-            {`COMPLETED[${projects.filter((project) => project.status.id === 2).length}]`}
-          </button>
-          <div className={`button-filter-bottom ${activeFilter === "completed" ? "highlighted" : ""}`}></div>
-        </div>
-      </div>
+      <ProjectStatusTabs projects={projects} setActiveFilter={setActiveFilter} activeFilter={activeFilter} />
 
       {/* Modal Add Project */}
       {isModalOpen && (
