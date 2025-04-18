@@ -39,6 +39,7 @@ const ProjectModal = ({
         StatusId: parseInt(status, 10),
         ClientId: clientName,
         UserId: projectOwner,
+        Created: selectedProject.created,
       };
       await editProject(selectedProject.id, editProjectData);
     } else {
@@ -74,8 +75,6 @@ const ProjectModal = ({
       setStatus(selectedProject.status.id || "");
     }
   }, [isEditModal, selectedProject]);
-
-  console.log("Rendering ProjectModal");
 
   return (
     <>

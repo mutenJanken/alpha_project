@@ -115,6 +115,10 @@ namespace Data.Services
                 StartDate = projectForm.StartDate,
                 EndDate = projectForm.EndDate,
                 Budget = projectForm.Budget,
+
+                // Det initiala Create datumet skickas med för att sorteringen på webbsidan ska
+                // fungera om användaren väljer att uppdatera ett projekt, innan skapades ett nytt vid edit.
+                Created = projectForm.Created,
                 ClientId = projectForm.ClientId,
                 UserId = projectForm.UserId,
                 StatusId = projectForm.StatusId
