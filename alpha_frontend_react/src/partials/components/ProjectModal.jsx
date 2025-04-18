@@ -79,10 +79,10 @@ const ProjectModal = ({
 
   return (
     <>
-      <form className="modal-add-container" onClick={handleModalToggle} onSubmit={handleModalSubmit}>
+      <form className="modal-container" onClick={handleModalToggle} onSubmit={handleModalSubmit}>
         {/* chatgpt fick hjälpa mig med ( onClick={(event) => event.stopPropagation()} ) då
           själva modalen stängdes när man klickade på den pga event bubbling */}
-        <div className="add-project-modal-open" onClick={(event) => event.stopPropagation()}>
+        <div className="project-modal-open" onClick={(event) => event.stopPropagation()}>
           <div className="top-wrapper">
             <div>
               <h3>{isEditModal ? "Edit Modal" : "Add Project"}</h3>
@@ -92,7 +92,7 @@ const ProjectModal = ({
             </div>
           </div>
           <div className="project-image-container">
-            <img src={UploadImageIcon} alt="upload-image icon" />
+            <img className="upload-image-icon" src={UploadImageIcon} alt="upload-image icon" />
           </div>
           <div className="input-container">
             <label className="label-text">Project Name</label>
