@@ -647,6 +647,16 @@ section > .content {
   }
 }
 
+/* 
+  EMILS CSS
+
+  Har fått experimentera en heldel och även om
+  css'essen kanske är lite okonventionell och stökig så är jag ändå rätt nöjd med 
+  det visuella resultatet.
+  Upptäckte lite sent att du redan hade skapats css för vissa delar jag tagit mig
+  an själv, men valde ändå i slutändan att köra på det jag kom fram till i dessa delar. 
+*/
+
 /* Filter Menu */
 /* Copilot hjälp med active, lyckades inte lösa det */
 .menu-filter {
@@ -665,6 +675,7 @@ section > .content {
   color: var(--gray-800);
   font-family: "Nunito", sans-serif;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .button-filter.active {
@@ -684,7 +695,8 @@ section > .content {
   background-color: var(--blue);
 }
 
-/* Fick be om lite ai hjälp här med att få det ett av cardsen att hamna under/bakom det andra */
+/* Fick be om lite ai hjälp här med att få det ett av cardsen att hamna under/bakom det andra for att kunna
+   skapa den speciella skuggan. */
 .projects-layout {
   display: flex;
   justify-content: start;
@@ -824,12 +836,14 @@ section > .content {
   }
 }
 
-.menu.button.edit {
+.menu-button.edit {
   color: var(--dark-100);
+  cursor: pointer;
 }
 
 .menu-button.delete {
   color: #ff6640;
+  cursor: pointer;
 }
 
 .edit-icon {
@@ -878,7 +892,7 @@ section > .content {
   }
 }
 
-.top-wrapper {
+.modal-type-wrapper {
   display: flex;
   justify-content: space-between;
   /* width: 490px; */
@@ -896,7 +910,7 @@ section > .content {
   }
 }
 
-.project-image-container {
+.project-image-wrapper {
   display: flex;
   justify-content: center;
 }
@@ -951,15 +965,16 @@ section > .content {
   &.description {
     display: flex;
     /* height: 143px; */
-    height: 100%;
-    padding-bottom: 95px;
+    /* height: 100%; */
+    padding-top: 20px;
+    padding-bottom: 100px;
   }
   &.budget {
     padding-left: 40px;
   }
   &.date {
     /* width: 233px; */
-    width: 185px;
+    width: 100%;
     /* height: 48px; */
   }
   &.select {
@@ -970,7 +985,7 @@ section > .content {
 .start-end-container {
   display: flex;
   justify-content: space-between;
-  /* gap: 24px; */
+  gap: 20px;
 }
 
 .date-field {

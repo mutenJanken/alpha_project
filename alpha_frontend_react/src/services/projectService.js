@@ -5,6 +5,9 @@
 // mer detaljerade felmeddelanden för utvecklaren, men att man kan presentera mer
 // "användarvänliga" fel i "affärslogiks" funktionerna via någon ui komponent eller
 // console.log, och på så sätt samtidigt separera ansvar.
+
+// Har placerat api-nyckeln och api-url'en i en .env fil som jag och lagt in i gitignore
+// så att den inte skickas med vid push till github.
 const API_KEY = import.meta.env.VITE_X_API_KEY;
 const API_URL = import.meta.env.VITE_API_URL;
 

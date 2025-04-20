@@ -8,8 +8,7 @@ const ProjectDropdownMenu = ({
   removeProject,
   setIsEditModal,
   setSelectedProject,
-  handleMenuToggle
-
+  handleMenuToggle,
 }) => {
   return (
     <div className="menu-container">
@@ -21,9 +20,8 @@ const ProjectDropdownMenu = ({
             setShowStatusSelect(true);
             handleModalToggle(true);
             setIsEditModal(true);
-            setSelectedProject(project)
-            handleMenuToggle(false)
-
+            setSelectedProject(project);
+            handleMenuToggle(false);
           }}
         >
           <img className="edit-icon" src={EditIcon} alt="edit-icon" />
@@ -35,7 +33,6 @@ const ProjectDropdownMenu = ({
         </button>
       </div>
       <div className="box-shadow-behind-menu">bakom</div>
-      {/* <div className="menu-close">MENU CLOSE</div> */}
     </div>
   );
 };

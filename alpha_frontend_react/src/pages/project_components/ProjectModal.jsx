@@ -79,10 +79,12 @@ const ProjectModal = ({
   return (
     <>
       <form className="modal-container" onClick={handleModalToggle} onSubmit={handleModalSubmit}>
-        {/* chatgpt fick hjälpa mig med ( onClick={(event) => event.stopPropagation()} ) då
-          själva modalen stängdes när man klickade på den pga event bubbling */}
+        {/* chatgpt fick hjälpa mig med ( onClick={(event) => event.stopPropagation()} ) då själva modalen 
+        stängdes när man klickade på den pga något som kallades event bubbling.
+        Tanken var att stänga modelen när man klickar utanför den(i en div själva modalen ligger inom men
+        som också är mycket större än den själv), vilket i slutändan fungerade med att använda stop.Propagation på modalen. */}
         <div className="project-modal-open" onClick={(event) => event.stopPropagation()}>
-          <div className="top-wrapper">
+          <div className="modal-type-wrapper">
             <div>
               <h3>{isEditModal ? "Edit Modal" : "Add Project"}</h3>
             </div>
@@ -90,25 +92,30 @@ const ProjectModal = ({
               <img src={ExitIcon} alt="exit-icon" />
             </div>
           </div>
-          <div className="project-image-container">
+          <div className="project-image-wrapper">
             <img className="upload-image-icon" src={UploadImageIcon} alt="upload-image icon" />
           </div>
           <div className="input-container">
-            <label className="label-text">Project Name</label>
-            <input
-              className="input-field"
-              type="text"
-              placeholder="Enter Project Name"
-              value={projectName}
-              onChange={(event) => setProjectName(event.target.value)}
-              required
-            />
+            <label className="label-text">
+              Project Name
+              <input
+                className="input-field"
+                type="text"
+                placeholder="Enter Project Name"
+                value={projectName}
+                onChange={(event) => setProjectName(event.target.value)}
+                required
+              />
+            </label>
           </div>
           <div className="input-container">
-            <label className="label-text">Client Name</label>
-            <div className="input-wrapper">
+            <label htmlFor="clientname" className="label-text">
+              Client Name
+            </label>
+            <div className="input-wrapper select">
               <select
                 className="input-field select"
+                id="clientname"
                 value={clientName}
                 onChange={(event) => setClientName(event.target.value)}
                 required
@@ -129,51 +136,60 @@ const ProjectModal = ({
             </div>
           </div>
           <div className="input-container">
-            <label className="label-text">Description</label>
-            <input
-              className="input-field description"
-              type="text"
-              placeholder="Type something"
-              value={description}
-              onChange={(event) => setDescription(event.target.value)}
-              required
-            />
+            <label className="label-text">
+              Description
+              <input
+                className="input-field description"
+                type="text"
+                placeholder="Type something"
+                value={description}
+                onChange={(event) => setDescription(event.target.value)}
+                required
+              />
+            </label>
           </div>
           <div className="start-end-container">
             <div className="input-container date">
-              <label className="label-text">Start Date</label>
-              <input
-                className="input-field date"
-                type="date"
-                placeholder="Select End Date"
-                value={startDate}
-                onChange={(event) => setStartDate(event.target.value)}
-                required
-              />
+              <label className="label-text">
+                Start Date
+                <input
+                  className="input-field date"
+                  type="date"
+                  placeholder="Select End Date"
+                  value={startDate}
+                  onChange={(event) => setStartDate(event.target.value)}
+                  required
+                />
+              </label>
               <div className="calendar-icon-wrapper">
                 <img className="calendar-icon" src={CalendarIcon} alt="calendar-icon" />
               </div>
             </div>
             <div className="input-container date">
-              <label className="label-text">End Date</label>
-              <input
-                className="input-field date"
-                type="date"
-                placeholder="Select End Date"
-                value={endDate}
-                onChange={(event) => setEndDate(event.target.value)}
-                required
-              />
+              <label className="label-text">
+                End Date
+                <input
+                  className="input-field date"
+                  type="date"
+                  placeholder="Select End Date"
+                  value={endDate}
+                  onChange={(event) => setEndDate(event.target.value)}
+                  required
+                />
+              </label>
               <div className="calendar-icon-wrapper">
                 <img className="calendar-icon" src={CalendarIcon} alt="calendar-icon" />
               </div>
             </div>
           </div>
           <div className="input-container">
-            <label className="label-text">Project Owner</label>
-            <div className="input-wrapper">
+            <label htmlFor="projectowner" className="label-text">
+              Project Owner
+            </label>
+            <div className="input-wrapper select">
               <select
                 className="input-field select"
+                id="projectowner"
                 value={projectOwner}
                 onChange={(event) => setProjectOwner(event.target.value)}
                 required
@@ -193,29 +209,34 @@ const ProjectModal = ({
             </div>
           </div>
           <div className="input-container">
-            <label className="label-text">Budget</label>
-            <div className="input-wrapper">
-              <input
-                className="input-field budget"
-                type="number"
-                placeholder="0"
-                value={budget}
-                onChange={(event) => setBudget(event.target.value)}
-                required
-              />
-              <div className="dollar-wrapper">
-                <img className="dollar-icon" src={DollarIcon} alt="dollar-icon" />
+            <label className="label-text">
+              Budget
+              <div className="input-wrapper">
+                <input
+                  className="input-field budget"
+                  type="number"
+                  placeholder="0"
+                  value={budget}
+                  onChange={(event) => setBudget(event.target.value)}
+                  required
+                />
+                <div className="dollar-wrapper">
+                  <img className="dollar-icon" src={DollarIcon} alt="dollar-icon" />
+                </div>
               </div>
-            </div>
+            </label>
           </div>
 
           {/* STATUS */}
           {showStatusSelect && (
             <div className="input-container">
-              <label className="label-text">Status</label>
-              <div className="input-wrapper">
+              <label htmlFor="projectstatus" className="label-text">
+                Status
+              </label>
+              <div className="input-wrapper select">
                 <select
                   className="input-field select"
+                  id="projectstatus"
                   value={status}
                   onChange={(event) => setStatus(event.target.value)}
                   required

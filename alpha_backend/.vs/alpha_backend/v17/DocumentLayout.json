@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|solutionrelative:data\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{86F123FE-4484-48EF-8AE6-0683D81B2F09}|WebAPI\\WebAPI.csproj|c:\\users\\skurk\\dev\\alpha_project\\alpha_backend\\webapi\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F123FE-4484-48EF-8AE6-0683D81B2F09}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|c:\\users\\skurk\\dev\\alpha_project\\alpha_backend\\data\\models\\updateprojectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C374994-E8D8-4316-98E1-71B7BEB8ED3A}|Data\\Data.csproj|solutionrelative:data\\models\\updateprojectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -36,7 +40,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -52,20 +56,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\ProjectController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAkwCwAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T16:39:34.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ProjectService.cs",
               "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Services\\ProjectService.cs",
               "RelativeDocumentMoniker": "Data\\Services\\ProjectService.cs",
               "ToolTip": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Services\\ProjectService.cs",
               "RelativeToolTip": "Data\\Services\\ProjectService.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAkwHkAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAkwIcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T14:17:58.13Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UpdateProjectForm.cs",
               "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\Data\\Models\\UpdateProjectForm.cs",
               "RelativeDocumentMoniker": "Data\\Models\\UpdateProjectForm.cs",
@@ -77,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\appsettings.json",
               "RelativeDocumentMoniker": "WebAPI\\appsettings.json",
@@ -89,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\Program.cs",
               "RelativeDocumentMoniker": "WebAPI\\Program.cs",
@@ -101,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "dbo.Statuses.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/alpha_sqlserver.database.windows.net/alpha_database/SqlAdmin/SqlTable/dbo.Statuses.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/alpha_sqlserver.database.windows.net/alpha_database/SqlAdmin/SqlTable/dbo.Statuses.sql",
@@ -110,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "dbo.Users.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/alpha_sqlserver.database.windows.net/alpha_database/SqlAdmin/SqlTable/dbo.Users.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/alpha_sqlserver.database.windows.net/alpha_database/SqlAdmin/SqlTable/dbo.Users.sql",
@@ -119,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "DefaultApiKeyMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\Skurk\\dev\\alpha_project\\alpha_backend\\WebAPI\\Extensions\\Middlewares\\DefaultApiKeyMiddleware.cs",
               "RelativeDocumentMoniker": "WebAPI\\Extensions\\Middlewares\\DefaultApiKeyMiddleware.cs",
