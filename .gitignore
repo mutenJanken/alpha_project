@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/alpha_backend/WebAPI/appsettings.json
+/alpha_backend/WebAPI/appsettings.Development.json
