@@ -3,8 +3,8 @@
     "",
     "\\alpha_backend",
     "\\alpha_backend\\Data",
-    "\\alpha_backend\\Data\\Repositories"
+    "\\alpha_backend\\Data\\Services"
   ],
-  "SelectedNode": "\\alpha_backend\\Data\\Repositories\\ProjectRepo.cs",
+  "SelectedNode": "\\alpha_backend\\Data\\Services\\ProjectService.cs",
   "PreviewInSolutionExplorer": false
 }

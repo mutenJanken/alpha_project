@@ -38,7 +38,7 @@ namespace WebAPI
             // Registrerar mina CORS-policyer
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
-            //app.UseMiddleware<DefaultApiKeyMiddleware>();
+            app.UseMiddleware<DefaultApiKeyMiddleware>();
             app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
