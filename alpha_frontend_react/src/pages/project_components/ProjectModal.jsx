@@ -56,13 +56,6 @@ const ProjectModal = ({
       await createProject(addProjectData);
     }
   };
-
-  // Fyller input och select fält med data från projektet som användaren vill redigera.
-  // Fick be copilot om hjälp här, speciellt med datumen då dom på serversidan skapas
-  // med både datum och tid(någon ISO format), vilken inte kan skrivas ut i input type="date".
-  // Lösningen blev att använda .split() och dela respektive datum sträng till en array med
-  // två strängar, i det här fallet vid char "T". Så pekar vi på första indexet i
-  // arrayen som innehåller datum utan tid.
   useEffect(() => {
     if (isEditModal && selectedProject) {
       setProjectName(selectedProject.projectName || "");
@@ -79,10 +72,6 @@ const ProjectModal = ({
   return (
     <>
       <form className="modal-container" onClick={handleModalToggle} onSubmit={handleModalSubmit}>
-        {/* chatgpt fick hjälpa mig med ( onClick={(event) => event.stopPropagation()} ) då själva modalen 
-        stängdes när man klickade på den pga något som kallades event bubbling.
-        Tanken var att stänga modelen när man klickar utanför den(i en div själva modalen ligger inom men
-        som också är mycket större än den själv), vilket i slutändan fungerade med att använda stop.Propagation på modalen. */}
         <div className="project-modal-open" onClick={(event) => event.stopPropagation()}>
           <div className="modal-type-wrapper">
             <div>
